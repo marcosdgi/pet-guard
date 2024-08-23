@@ -25,9 +25,9 @@ const openModalRegister = () =>{
     AppHomeTheHeader 
     .grid.gap-4.px-4
         .flex.gap-2.items-center.bg-slate-100.p-4.rounded-md.h-auto.shadow-md
-                        .flex.justify-center.items-center
-                            img(src="/images/logoPet.svg" width="300px")
-                            .bg-white.h-auto.p-2.rounded-md.h-auto.gap-4.flex.flex-col
+                        .flex.justify-center.items-center.gap-2
+                            img(src="/images/logoPet.svg" width="300px").rounded-full
+                            .bg-white.border-l-2.border-purple-300.h-auto.p-2.rounded-md.h-auto.gap-4.flex.flex-col.max-w-sm
                                 p.text-3xl.text-purple-600 Nuestros servicios
                                 hr
                                 p.mt-2 Brindamos información para el correcto cuidado y alimentación de tus mascotas. Te ofrecemos ayuda médica profesional para tus peluditos. Tener una mascota no es solo un acto de amor, debes proporcionarles los cuidados adecuados, nuestro sitio PET GUARD te brinda toda la información acerca de su mantenimiento en cuanto a su salud, alimentación y ejercitación física.
@@ -54,7 +54,7 @@ const openModalRegister = () =>{
                         hr
                         button.bg-purple-200.p-2.rounded-md(
                             class="hover:bg-purple-100 transition-colors ease-in-out"
-                            @click="$router.push(`/adopciones`)"
+                            @click="$router.push(`/mascotas`)"
                             )
                             span.text-xl.text-purple-800 Adopciones
 

@@ -1,7 +1,7 @@
 export interface IMascotaResponse{
     id: number;
     nombre: string;
-    edad: string;
+    edad: number;
     raza_id: number;
     dueño_id: number;
     is_enfermo: boolean;
