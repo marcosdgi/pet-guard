@@ -12,11 +12,18 @@
   "dependencies": {
     "@nuxt/icon": "^1.4.7",
     "@nuxtjs/tailwindcss": "^6.12.1",
+    "@pinia/nuxt": "^0.5.4",
     "nuxt": "^3.12.4",
+    "ohmyfetch": "^0.4.21",
+    "pinia": "^2.2.2",
     "pug": "^3.0.3",
     "tabler-icons": "^1.35.0",
     "vue": "latest",
+    "vue-chart.js": "^0.2.0",
     "vue-final-modal": "^4.5.4",
     "vue3-easy-data-table": "^1.5.47"
+  },
+  "devDependencies": {
+    "@types/chart.js": "^2.9.41"
   }
 }

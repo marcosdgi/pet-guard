@@ -1,7 +1,7 @@
 <script setup lang="ts">
-onMounted(async()=>{
-    await navigateTo(`/login`)
-})
+// onMounted(async()=>{
+//     await navigateTo(`/login`)
+// })
 </script>
 
 <template lang="pug">

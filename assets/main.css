@@ -1,0 +1,98 @@
+.page-enter-active,
+.page-leave-active {
+    transition: all 0.2s;
+}
+
+.page-enter-from,
+.page-leave-to {
+    opacity: 0;
+    filter: blur(0.2rem);
+}
+
+:root {
+    /* colors */
+    --blue-d: #0f6491;
+    --blue-rc: #22a3e6;
+    --blue-md: #a9d8f1;
+    --blue-l: #e1f4fd;
+    --green-rc: #00a488;
+    --green-d: #2d836a;
+    --green-l: #cce7df;
+    /* Añadido un nuevo color verde claro */
+    --purple-rc: #964aba;
+    --purple-l: #f2e3f2;
+    --purple-d: #632d83;
+    --yellow-d: #b28f00;
+    --yellow-rc: #ffcc00;
+    --yellow-l: #fffcee;
+    /* Añadido un nuevo color amarillo claro */
+    --orange-l: #fff5ed;
+    /* Añadido un nuevo color naranja claro */
+    --orange-rc: #ff6d3d;
+    /* Añadido un nuevo color naranja-rojo claro */
+    --red-rc: #ba4a4a;
+    --red-l: #efe3e3;
+    /* Añadido un nuevo color rojo claro */
+    --red-error: #f9dedc;
+    /* Añadido un nuevo color de error rojo claro */
+    --secondary: #4c6272;
+    --search: #9d9d9d;
+    /* Añadido un nuevo color de búsqueda gris */
+    --lock: #c0c0c0;
+    --neutro: #f5f9fc;
+    --neutro-d: #f5f5fb;
+}
+
+.customize-table {
+    --easy-table-border: 1px solid transparent;
+    /* --easy-table-row-border: 1px solid #445269; */
+    
+    --easy-table-header-font-size: 14px;
+    /* --easy-table-header-height: 50px; */
+    --easy-table-header-font-color: var(--purple-d);
+    --easy-table-header-background-color: var(--purple-l);
+    --easy-table-header-item-padding: 10px 15px;
+
+    /* --easy-table-body-even-row-font-color: #fff; */
+    /* --easy-table-body-even-row-background-color: #4c5d7a; */
+    /* --easy-table-body-row-font-color: #c0c7d2; */
+    /* --easy-table-body-row-background-color: #2d3a4f; */
+    /* --easy-table-body-row-height: 50px; */
+    --easy-table-body-row-font-size: 14px;
+
+    /* --easy-table-body-row-hover-font-color: #2d3a4f; */
+    --easy-table-body-row-hover-background-color: var(--neutro);
+
+    --easy-table-body-item-padding: 10px 15px;
+
+    --easy-table-footer-background-color: var(--purple-l);
+    /* --easy-table-footer-font-color: #c0c7d2; */
+    /* --easy-table-footer-font-size: 14px; */
+    /* --easy-table-footer-padding: 0px 10px; */
+    /* --easy-table-footer-height: 50px; */
+
+    /* --easy-table-rows-per-page-selector-width: 70px; */
+    /* --easy-table-rows-per-page-selector-option-padding: 10px; */
+    /* --easy-table-rows-per-page-selector-z-index: 1; */
+
+    /* --easy-table-scrollbar-track-color: #2d3a4f; */
+    /* --easy-table-scrollbar-color: #2d3a4f; */
+    /* --easy-table-scrollbar-thumb-color: #4c5d7a; */
+    /* --easy-table-scrollbar-corner-color: #2d3a4f; */
+
+    /* --easy-table-loading-mask-background-color: #2d3a4f; */
+}
+
+.customize-table .selected-row {
+    --easy-table-body-row-hover-background-color: var(--blue-l) !important;
+}
+
+.selected-row {
+    --easy-table-body-row-background-color: var(--blue-l) !important;
+    cursor: pointer;
+}
+
+
+.sortType-icon {
+    display: none !important;
+}

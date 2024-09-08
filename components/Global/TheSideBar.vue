@@ -30,15 +30,15 @@ const toggleSideBarVisibility = () => {
 
 <template lang="pug">
 
-aside.mt-2.border-t-4.border-purple-600.rounded-md.h-96( class="sideBar" :class="{'sideBarOff':!isActive, 'sideBarOn': isActive}" )
+aside.border-b-4.border-purple-600.rounded-md.h-96( class="sideBar" :class="{'sideBarOff':!isActive, 'sideBarOn': isActive}" )
       template(v-for="button in buttons" :key="button.id")
         NuxtLink( :to="button.route" )
           div( class="sideBarChild p-1 rounded-md " :class="{'hover:bg-purple-100 transition-colors  ease-in-out 1.5ms': isActive}" )
             img(size="24px" :src= "button.image_path" width="20px")
             p(class=" ml-2.5 " :class="{ 'sideBarChildOff': !isActive }") {{button.text}}
             hr
-        button(class="absolute flex justify-center right-[-12px]  border bg-white bottom-80 rounded-[50%] w-[25px] h-[25px] " @click=" toggleSideBarVisibility ") 
-                img(src="/icons/playMusic.svg")
+        button(class="absolute flex justify-center right-[-12px] items-center border bg-white bottom-80 rounded-[50%] w-[25px] h-[25px] " @click=" toggleSideBarVisibility ") 
+              Icon(name="tabler:arrow-right" size="20").text-purple-800
 
 </template>
     

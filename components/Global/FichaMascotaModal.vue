@@ -11,13 +11,13 @@ const props = defineProps<Props>()
 
 <template lang="pug">
 VueFinalModal(
-    content-class="fixed h-full rounded top-0 p-0 z-50 bg-white w-[50%] right-0  overflow-auto "
+    content-class="fixed h-full rounded top-0 p-0 z-50 bg-white w-[50%] right-0  overflow-auto bg-[url(./images/patron.png)] bg-center bg-cover"
     content-transition="vfm-slide-right"
     overlay-transition="vfm-fade"
     :esc-to-close="false"
     border-cell 
 )
-    .grid.gap-4.border-t-4.border-purple-800.px-4
+    .grid.gap-4.border-t-4.border-purple-800.px-4(class="")
         p.text-2xl.text-purple-800.mt-2.text-center.border-b-2.border-purple-300.py-1 Ficha de la mascota
 
         p.text-sm Este panel detalla toda la informacion referente a esta mascota 

@@ -1,7 +1,36 @@
 <script setup lang="ts">
 definePageMeta({
-    layout:'login-layout'
+    layout: false
 })
+
+interface loginForm {
+    correo: string;
+    contrasena: string;
+}
+const loginForm = ref<loginForm>({
+    correo: "",
+    contrasena: "",
+})
+const iniciandoSesion = ref<boolean>(false)
+const typePassword = ref<string>("password")
+const authStore = useAuthUserStore()
+
+const login = async () => {
+    iniciandoSesion.value = true
+    const login = await authStore.login({
+        correo: loginForm.value.correo,
+        contrasena: loginForm.value.contrasena,
+    })
+    if (!login) {
+        iniciandoSesion.value = false
+        await navigateTo("/login")
+    }{
+
+        await navigateTo("/home")
+    }
+  
+
+}
 
 </script>
 
@@ -15,17 +44,22 @@ definePageMeta({
         
         hr
         .grid.items-center.gap-5
-            .flex.flex-col.items-start.justify-center.gap-2
-                p Usuario:
-                input(type="text" placeholder="example123").w-full.p-2.rounded-md.border-b-2.border-purple-200
-        
-            .flex.flex-col.items-start.justify-between.gap-2
-                p Contraseña:
-                input(type="password" placeholder="Escribe aquí..." ).p-2.rounded-md.w-full.border-purple-200.border-b-2
+            form(@submit.prevent="login").gap-2
+                .flex.flex-col.items-start.justify-center.gap-2
+                    p Usuario:
+                    input(type="text" placeholder="example123" v-model="loginForm.correo").w-full.p-2.rounded-md.border-b-2.border-purple-200
+            
+                .flex.flex-col.items-start.justify-between.gap-2
+                    p Contraseña:
+                    input(type="password" 
+                        placeholder="Escribe aquí..." 
+                        minlength="6"
+                        required
+                        v-model="loginForm.contrasena" ).p-2.rounded-md.w-full.border-purple-200.border-b-2
 
-            .w-full
-                button().bg-purple-800.p-2.rounded-md.text-white.w-full
-                    span Aceptar
+                .w-full
+                    button(@click="login" :disabled="iniciandoSesion").bg-purple-800.p-2.rounded-md.text-white.w-full
+                        span {{ iniciandoSesion ? "Iniciando Sesión" : "Ingresar" }}
             .w-full.bg-slate-50.p-2.rounded-md
                 .flex.flex-row.items-center.gap-2
                     p.text-sm ¿Aún no tiene usuario?

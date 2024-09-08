@@ -65,6 +65,7 @@ VueFinalModal(
                 textarea(type="tel" placeholder="Escribe aquí").w-full.border.border-b-2.border-purple-300.p-2.rounded-md
             
             .w-full.flex.justify-center
-                button().bg-purple-800.text-white.p-3.rounded-md
-                        span Realizar solicitud
+                button().bg-purple-800.text-white.p-3.rounded-md.flex.gap-2.items-center
+                    Icon(name="tabler:device-floppy" size="24")
+                    span Realizar solicitud
 </template>

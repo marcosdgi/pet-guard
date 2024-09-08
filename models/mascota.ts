@@ -1,13 +1,15 @@
-export interface IMascotaResponse{
+import type { ITipoRazaResponse } from "./tipoRaza";
+
+export interface IMascotaResponse {
     id: number;
     nombre: string;
     edad: number;
+    peso: number;
+    imagen_mascota: string
     raza_id: number;
-    dueño_id: number;
+    usuario_id: number;
     is_enfermo: boolean;
-    is_en_tratamiento: boolean;
-    is_medicacion:boolean;
     is_reciclado: boolean;
-    peso: string;    
-    in_adopcion: boolean;
+    is_adoptado: boolean;
+    tipoRaza:ITipoRazaResponse;
 }
